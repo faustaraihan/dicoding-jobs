@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+.navigation-progress-bar {
+  animation: none;
+  transition: transform 180ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navigation-progress-bar {
+    transition: none;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #18181b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.vacancy-description {
+  overflow-wrap: anywhere;
+}
+
+.vacancy-description img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.vacancy-description img.ProseMirror-selectednode {
+  outline: 2px solid #71717a;
+  outline-offset: 2px;
+}
+
+.vacancy-description :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) {
+  margin-top: 1rem;
+}
+
+.vacancy-description :is(h2, h3) {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.34px;
+}
+
+.vacancy-description ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.vacancy-description ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.vacancy-description a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vacancy-description .editor-link-selection {
+  background-color: #bfdbfe;
+}
+
+.vacancy-description blockquote {
+  border-left: 2px solid #e4e4e7;
+  padding-left: 1rem;
+}
+
+.vacancy-description > :first-child {
+  margin-top: 0;
+}

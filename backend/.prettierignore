@@ -1,0 +1,17 @@
+vendor/
+node_modules/
+storage/
+bootstrap/cache/
+public/
+.agents/
+.codex/
+.ai/
+.vscode/
+*.php
+artisan
+database/data/
+database/*.sqlite*
+composer.lock
+package-lock.json
+.env*
+AGENTS.md
